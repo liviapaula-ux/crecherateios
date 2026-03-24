@@ -1,0 +1,165 @@
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organização Financeira: Auxílio Creche</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .timeline-line { position: absolute; left: 50%; width: 2px; height: 100%; background: #e2e8f0; z-index: 0; }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-5xl mx-auto">
+        <!-- Header -->
+        <header class="mb-12 text-center">
+            <h1 class="text-3xl font-bold text-slate-800 mb-2">Reestruturação Financeira: Auxílio Creche</h1>
+            <p class="text-slate-600">Migração para Cartão Multibenefícios e Alinhamento Contábil</p>
+        </header>
+
+        <!-- Cronograma Visual -->
+        <section class="mb-12 bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+            <h2 class="text-xl font-semibold mb-6 text-slate-700 flex items-center">
+                <span class="bg-blue-100 text-blue-600 p-2 rounded-lg mr-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="Wait, what? A clock icon!" />
+                        <circle cx="12" cy="12" r="10" stroke-width="2" />
+                        <path d="M12 6v6l4 2" stroke-width="2" />
+                    </svg>
+                </span>
+                A Janela Crítica Mensal
+            </h2>
+            
+            <div class="relative flex flex-col md:flex-row justify-between items-start md:items-center space-y-8 md:space-y-0 px-4">
+                <div class="z-10 bg-white border-2 border-blue-500 p-4 rounded-xl text-center w-full md:w-1/4">
+                    <span class="block font-bold text-blue-600 text-lg text-nowrap">Dia 1 a 16</span>
+                    <span class="text-sm text-slate-500">Período Regular</span>
+                    <p class="text-xs mt-2 text-slate-400">Entradas são processadas na folha do mês atual.</p>
+                </div>
+                
+                <div class="hidden md:block h-1 w-full bg-slate-100 absolute top-1/2 -z-0"></div>
+
+                <div class="z-10 bg-amber-50 border-2 border-amber-400 p-4 rounded-xl text-center w-full md:w-1/4">
+                    <span class="block font-bold text-amber-600 text-lg">Dia 17 a 30</span>
+                    <span class="text-sm text-slate-500">Zona de Conflito</span>
+                    <p class="text-xs mt-2 text-slate-600 font-medium">Novos bebês / Admitidos neste período geram o "Gap".</p>
+                </div>
+
+                <div class="z-10 bg-emerald-50 border-2 border-emerald-500 p-4 rounded-xl text-center w-full md:w-1/4">
+                    <span class="block font-bold text-emerald-600 text-lg">Dia 30</span>
+                    <span class="text-sm text-slate-500">Pagamento Cartão</span>
+                    <p class="text-xs mt-2 text-slate-400">Desembolso financeiro ocorre aqui.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparativo de Cenários -->
+        <div class="grid md:grid-cols-2 gap-8">
+            
+            <!-- CENÁRIO A -->
+            <div class="bg-white p-6 rounded-2xl border-l-4 border-red-400 shadow-sm card-hover flex flex-col">
+                <div class="flex-grow">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-bold text-xl text-slate-800">Cenário A: Fluxo com Gap</h3>
+                        <span class="bg-red-100 text-red-600 text-[10px] uppercase px-2 py-1 rounded font-bold">Desaconselhado pelo Finance</span>
+                    </div>
+                    <p class="text-sm text-slate-600 mb-4 italic">"Paga-se no cartão no dia 30, mas o rateio contábil só acontece no mês seguinte."</p>
+                    
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <span class="text-emerald-500 mr-2 mt-1">✓</span>
+                            <p class="text-sm text-slate-700"><strong>Pró:</strong> Agilidade total para o novo beneficiário.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-red-500 mr-2 mt-1">✗</span>
+                            <p class="text-sm text-slate-700"><strong>Contra:</strong> Distorce o P&L mensal (DRE inflado no mês 1 e sobrecarregado no mês 2).</p>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-red-500 mr-2 mt-1">✗</span>
+                            <p class="text-sm text-slate-700"><strong>Contra:</strong> Dificulta auditoria e conciliação bancária.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CENÁRIO B -->
+            <div class="bg-white p-6 rounded-2xl border-l-4 border-emerald-400 shadow-sm card-hover flex flex-col ring-2 ring-emerald-500 ring-offset-2">
+                <div class="flex-grow">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-bold text-xl text-slate-800">Cenário B: Pagto Retroativo</h3>
+                        <span class="bg-emerald-100 text-emerald-600 text-[10px] uppercase px-2 py-1 rounded font-bold">Recomendado / Escalável</span>
+                    </div>
+                    <p class="text-sm text-slate-600 mb-4 italic">"Entradas após o dia 16 recebem no mês seguinte o valor em dobro (Mês anterior + Mês atual)."</p>
+                    
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <span class="text-emerald-500 mr-2 mt-1">✓</span>
+                            <p class="text-sm text-slate-700"><strong>Pró:</strong> 100% de integridade contábil. O rateio bate com o pagamento via cartão.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-emerald-500 mr-2 mt-1">✓</span>
+                            <p class="text-sm text-slate-700"><strong>Pró:</strong> Parametrizável. O sistema de folha calcula o retroativo automaticamente.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-amber-500 mr-2 mt-1">!</span>
+                            <p class="text-sm text-slate-700"><strong>Ponto de Atenção:</strong> O primeiro pagamento para quem entra após o dia 16 demora 45 dias.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CENÁRIO C -->
+            <div class="bg-white p-6 rounded-2xl border-l-4 border-blue-400 shadow-sm card-hover flex flex-col">
+                <div class="flex-grow">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-bold text-xl text-slate-800">Cenário C: Provisão Mensal</h3>
+                        <span class="bg-blue-100 text-blue-600 text-[10px] uppercase px-2 py-1 rounded font-bold">Estratégico</span>
+                    </div>
+                    <p class="text-sm text-slate-600 mb-4 italic">"Financeiro provisiona o gasto com base no cadastro de dependentes, independente da folha."</p>
+                    
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <span class="text-emerald-500 mr-2 mt-1">✓</span>
+                            <p class="text-sm text-slate-700"><strong>Pró:</strong> O resultado da empresa fica blindado contra variações de entrada.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-red-500 mr-2 mt-1">✗</span>
+                            <p class="text-sm text-slate-700"><strong>Contra:</strong> Exige que o cadastro de dependentes esteja 100% saneado.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CENÁRIO D -->
+            <div class="bg-slate-800 p-6 rounded-2xl border-l-4 border-slate-500 shadow-sm card-hover flex flex-col text-white">
+                <div class="flex-grow">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-bold text-xl text-white">Conclusão Lógica</h3>
+                    </div>
+                    <p class="text-sm text-slate-300 mb-6">Para garantir a satisfação do colaborador e o conforto do Finance:</p>
+                    
+                    <div class="bg-slate-700 p-4 rounded-xl border border-slate-600">
+                        <p class="text-xs uppercase tracking-wider text-slate-400 font-bold mb-2">Ação Sugerida:</p>
+                        <p class="text-sm leading-relaxed text-slate-200">
+                            Adotar o <strong>Cenário B</strong>. Ele é o único que permite automatização sistêmica sem gerar trabalho manual recorrente para o Financeiro (provisões e reversões) ou erros de competência.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Rodapé com FAQ -->
+        <footer class="mt-12 text-slate-500 text-sm border-t border-slate-200 pt-8">
+            <p class="font-bold mb-2">Por que o Cenário B é mais escalável?</p>
+            <p>Em sistemas de folha, você consegue configurar uma rubrica que olha para a "Data de Início do Benefício". Se essa data for menor que o mês atual, o sistema gera o evento "Retroativo" automaticamente. O Financeiro recebe um arquivo único onde <strong>Soma da Folha = Fatura do Cartão</strong>. Sem gaps, sem stress.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
